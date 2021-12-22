@@ -18,6 +18,12 @@ const contentProjects = `<main aria-role="main">
             <td><a href="https://github.com/deianov/learning-style" target="_blank">github</a></td>
             <td><a href="https://learning-style.com" target="_blank">learning-style.com</a></td>
         </tr>
+        <tr>
+        <th>2</th>
+        <td>private</td>
+        <td></td>
+        <td><a href="https://deianov.com/private">deianov.com/private</a></td>
+    </tr>
     </tbody>
 </table>
 </main>`;
