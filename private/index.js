@@ -1,9 +1,9 @@
 const decode = (s) => decodeURIComponent(escape(window.atob(s)));
 const getId = (id) => document.getElementById(id);
-const numbers1 = [0,0,0,0, 3.00, 18.24, 1.90, 13.68, 7.07, 2.48, 7.85, 4.10, 8.61];
+const numbers1 = [0,0,0,0, "", 18.24, 1.90, 13.68, 7.07, 2.48, 7.85, 4.10, 8.61];
 const numbers2 = [0,0, 7.00, 3.29, 9.63, 6.73];
 const titles = decode("0LDQv9Cw0YDRgtCw0LzQtdC90YI7CtGC0LDQstCw0L07CtC60LDRgNGC0LA7CtGD0LsuINCb0Y7QsdC10L0g0JrQsNGA0LDQstC10LvQvtCyIOKEliA1LdCwLCDQtdGCLiA2LCDQsNC/LiAyMTs=").split(";");
-const labels = decode("NzcuMzkg0LrQsi7QvCAtINCX0LDRgdGC0YDQvtC10L3QsNGC0LAg0L/Qu9C+0YkgKNCX0J8pOzY3LjU1INC60LIu0LwgLSDQv9C+INCd0JAsINC30LDQtdC00L3QviDRgSA0LjcxJSDQuNC0LtGHLiDQvtGCINGB0LPRgNCw0LTQsNGC0LAg0Lgg0LzRj9GB0YLQvtGC0L47NjMuOTMg0LrQsi7QvCAtINC/0LvQvtGJ0Lg7fjMuMDAg0LrQsi7QvCAtINGB0LrQu9Cw0LTQvtCy0L4g0L/RgNC+0YHRgtGA0LDQvdGB0YLQstC+IEg9NjAg0YHQvDvRgdC60LsuO9C00L3QtdCy0L3QsDvRgdGC0YrQu9Cx0Lg70YHQv9Cw0LvQvdGPO9GC0LXRgNCw0YHQsDvQsdCw0LvQutC+0L070LrRg9GF0L3RjzvQsdCw0L3RjzvQutC+0YDQuNC00L7RgDsyNi42NSDQutCyLtC8IC0g0YfQuNGB0YLQsCDQv9C70L7RiTvQstC40YHQvtGH0LjQvdCwIDEwMy0xODUg0YHQvC470YHQutC70LDQtDvRgdC60LvQsNC0O9GB0L/QsNC70L3RjzvQutC+0YAu").split(";");
+const labels = decode("NzcuMzkg0LrQsi7QvCAtINCX0LDRgdGC0YDQvtC10L3QsCDQv9C70L7RiSAo0JfQnyk7NjcuNTUg0LrQsi7QvCAtINC/0L4g0J3QkCwg0LfQsNC10LTQvdC+INGBIDQuNzElINC40LQu0YcuINC+0YIg0YHQs9GA0LDQtNCw0YLQsCDQuCDQvNGP0YHRgtC+0YLQvjs2My45MyDQutCyLtC8IC0g0L/Qu9C+0YnQuDt+My4wMCDQutCyLtC8IC0g0YHQutC70LDQtNC+0LLQviDQv9GA0L7RgdGC0YDQsNC90YHRgtCy0L4gSD02MCDRgdC8OzvQtNC90LXQstC90LA70YHRgtGK0LvQsdC4O9GB0L/QsNC70L3RjzvRgtC10YDQsNGB0LA70LHQsNC70LrQvtC9O9C60YPRhdC90Y870LHQsNC90Y87OzI2LjY1INC60LIu0LwgLSDRh9C40YHRgtCwINC/0LvQvtGJO9Cy0LjRgdC+0YfQuNC90LA6IDEwMy0xODUg0YHQvC470YHQutC70LDQtDvRgdC60LvQsNC0O9GB0L/QsNC70L3Rjzs=").split(";");
 const content = getId("content");
 
 const contentHome = content.innerHTML;
@@ -82,7 +82,7 @@ function setLayer(name) {
 function label(points, fromIndex, text) {
     for (let i = fromIndex; i < points.length && i < text.length; i++) {
         const v = text[i];
-        points[i].textContent = isNaN(v) ? v : Number(v).toFixed(2);
+        points[i].textContent = isNaN(v) || v === "" ? v : Number(v).toFixed(2);
     }
 }
 
