@@ -27,8 +27,11 @@ const contentProjects = `<main aria-role="main">
     </tbody>
 </table>
 </main>`;
-const contentCerts = `<embed src="/assets/certificates_web.pdf" type="application/pdf"></embed>`;
+const contentCertificates = `
+<object data="/assets/certificates_web.pdf?#pagemode=bookmarks&zoom=85" type="application/pdf">
+    <p>You don't have a PDF plugin, but you can <a href="/assets/certificates_web.pdf">download the PDF file.</a></p>
+</object>`;
 const links = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
 links[0].addEventListener("click", () => {content.innerHTML = contentHome});
 links[1].addEventListener("click", () => {content.innerHTML = contentProjects});
-links[2].addEventListener("click", () => {content.innerHTML = contentCerts});
+links[2].addEventListener("click", () => {content.innerHTML = contentCertificates});
