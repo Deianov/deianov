@@ -2,7 +2,7 @@ const content = document.getElementsByClassName("content")[0];
 const contentHome = content.innerHTML;
 const contentProjects = `<main aria-role="main">
 <h2>List of my projects</h2>
-<table >
+<table>
     <thead>
         <tr>
             <th>#</th>
@@ -19,14 +19,16 @@ const contentProjects = `<main aria-role="main">
             <td><a href="https://learning-style.com" target="_blank">learning-style.com</a></td>
         </tr>
         <tr>
-        <th>2</th>
-        <td>private</td>
-        <td></td>
-        <td><a href="https://deianov.com/private">deianov.com/private</a></td>
-    </tr>
+            <th>2</th>
+            <td>private</td>
+            <td></td>
+            <td><a href="https://deianov.com/private">deianov.com/private</a></td>
+        </tr>
     </tbody>
 </table>
 </main>`;
+const contentCerts = `<embed src="/assets/certificates_web.pdf" type="application/pdf"></embed>`;
 const links = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
 links[0].addEventListener("click", () => {content.innerHTML = contentHome});
 links[1].addEventListener("click", () => {content.innerHTML = contentProjects});
+links[2].addEventListener("click", () => {content.innerHTML = contentCerts});

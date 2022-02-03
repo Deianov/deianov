@@ -7,3 +7,9 @@ table td {
     text-align: left;
     padding: 0.2rem 0.3rem 0.2rem 0;
 }
+.content > embed {
+    width: 1200px;
+    height: 900px;
+    max-width: 95vw;
+    max-height: 95vh;
+}
