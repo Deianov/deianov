@@ -25,9 +25,11 @@ table td {
     align-items:center;
     justify-content:space-between;
     margin:0 auto;
+    width:860px;
+    height: 100%;
 }
 
 .content > * {
     max-width: 95vw; 
     max-height: 95vh;
-}  
+}
