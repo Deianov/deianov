@@ -14,7 +14,7 @@ const contents = [contentHome, contentHome, contentMap];
 const links = document.getElementsByClassName("menu")[0].getElementsByTagName("a");
 for (let i = 0; i < links.length; i++) {
     const a = links[i];
-    a.textContent = titles[i];
+    // a.textContent = titles[i];
     a.addEventListener("click", function() {
         content.innerHTML = contents[i];
         updateDom(i);
