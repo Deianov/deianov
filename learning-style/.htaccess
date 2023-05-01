@@ -1,0 +1,5 @@
+SSLOptions +StrictRequire
+SSLRequireSSL
+SSLRequire %{HTTP_HOST} eq "learning-style.com"
+ErrorDocument 403 https://learning-style.com
+AddType application/x-httpd-ea-php70 .html
