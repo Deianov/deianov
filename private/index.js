@@ -7,7 +7,7 @@ const labels = decode("NzcuMzkg0LrQsi7QvCAtINCX0LDRgdGC0YDQvtC10L3QsCDQv9C70L7Ri
 const content = getId("content");
 
 const contentHome = content.innerHTML;
-const contentMap = `<div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%9B%D1%8E%D0%B1%D0%B5%D0%BD%20%D0%9A%D0%B0%D1%80%D0%B0%D0%B2%D0%B5%D0%BB%D0%BE%D0%B2%205%D0%B0,%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:600px;width:800px;}</style><a href="https://www.embedgooglemap.net">embed google</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:800px;}</style></div></div>`;
+const contentMap = `<div class="mapouter"><div class="gmap_canvas"><iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d475.40591488256587!2d23.33192707340583!3d42.68880330760123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m5!1s0x40aa850acef85ebb%3A0xdab6fde59c607aa8!2sul.%20%22Lyuben%20Karavelov%22%205a%2C%20Sofia%2C%20Bulgarien!3m2!1d42.6888104!2d23.332054!4m0!5e0!3m2!1sde!2sde!4v1693424904297!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><style>.mapouter{position:relative;text-align:right;height:600px;width:800px;}</style><a href="https://www.embedgooglemap.net">embed google</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:800px;}</style></div></div>`;
 const contents = [contentHome, contentHome, contentMap];
 
 /* menu */
