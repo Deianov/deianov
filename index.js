@@ -5,7 +5,6 @@ const contentProjects = `<main aria-role="main">
 <table>
     <thead>
         <tr>
-            <th>#</th>
             <th>Name</th>
             <th>Source code</th>
             <th>Url</th>
@@ -13,17 +12,19 @@ const contentProjects = `<main aria-role="main">
     </thead>
     <tbody>
         <tr>
-            <th>1</th>
             <td>learning-style</td>
             <td><a href="https://github.com/deianov/learning-style" target="_blank">github</a></td>
             <td><a href="https://learning-style.com" target="_blank">learning-style.com</a></td>
         </tr>
         <tr>
-            <th>2</th>
             <td>private</td>
-            <td></td>
+            <td><a href="https://github.com/Deianov/deianov/tree/main/private" target="_blank">github</a></td>
             <td><a href="https://deianov.com/private">deianov.com/private</a></td>
         </tr>
+        <tr>
+            <td>learning-style-ts</td>
+            <td><a href="https://github.com/deianov/learning-style-ts" target="_blank">github</a></td>
+    </tr>
     </tbody>
 </table>
 </main>`;
@@ -32,6 +33,12 @@ const contentCertificates = `
     <p>You don't have a PDF plugin, but you can <a href="/assets/certificates_web.pdf">download the PDF file.</a></p>
 </object>`;
 const links = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
-links[0].addEventListener("click", () => {content.innerHTML = contentHome});
-links[1].addEventListener("click", () => {content.innerHTML = contentProjects});
-links[2].addEventListener("click", () => {content.innerHTML = contentCertificates});
+links[0].addEventListener("click", () => {
+	content.innerHTML = contentHome;
+});
+links[1].addEventListener("click", () => {
+	content.innerHTML = contentProjects;
+});
+links[2].addEventListener("click", () => {
+	content.innerHTML = contentCertificates;
+});
