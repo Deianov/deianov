@@ -1119,3 +1119,13 @@ table td {
 	max-width: 95vw;
 	max-height: 95vh;
 }
+
+.menu_bottom > a {
+	margin: 10px;
+	text-decoration: none;
+}
+
+.menu_bottom a:hover,
+.menu_bottom .active{
+	text-decoration: underline;
+}

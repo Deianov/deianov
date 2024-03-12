@@ -12,8 +12,8 @@ const contents = [contentHome, contentHome, contentMap];
 
 /* menu */
 const links = document.getElementsByClassName("menu")[0].getElementsByTagName("a");
-for (let i = 0; i < links.length; i++) {
-    const a = links[i];
+for (let i = 0; i < linksMenu.length; i++) {
+    const a = linksMenu[i];
     // a.textContent = titles[i];
     a.addEventListener("click", function() {
         content.innerHTML = contents[i];
@@ -27,7 +27,7 @@ function updateDom(index) {
     }
     /* set title */
     content.getElementsByClassName("title")[0].innerHTML = `<span>${titles[3]}</span>`;
-    /* set level */ 
+    /* set level */
     getId("level1").classList.toggle("none", index ==! 0);
     getId("level2").classList.toggle("none", index ==! 1);
     /* add events */
@@ -54,7 +54,7 @@ function setButton(name) {
     const buttons = document.getElementsByClassName("buttons")[0].children;
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.toggle("active", buttons[i].classList.contains(name));
-    }    
+    }
 }
 
 function setLayer(name) {
@@ -67,7 +67,7 @@ function setLayer(name) {
         for (let i = 0; i < elements.length; i++) {
             const e = elements[i];
             e.classList.toggle("none", !e.classList.contains(name));
-            
+
         }
     }
     label(content.getElementsByTagName("text"), 0, labels);

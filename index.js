@@ -28,17 +28,45 @@ const contentProjects = `<main aria-role="main">
     </tbody>
 </table>
 </main>`;
-const contentCertificates = `
-<object data="/assets/certificates_web.pdf?#pagemode=bookmarks&zoom=85" type="application/pdf">
-    <p>You don't have a PDF plugin, but you can <a href="/assets/certificates_web.pdf">download the PDF file.</a></p>
+const contentCertificatesList = `
+<object data="/assets/certificates_list.pdf?zoom=85" type="application/pdf">
+    <p>You don't have a PDF plugin, but you can <a href="/assets/certificates_list.pdf">download the PDF file.</a></p>
 </object>`;
-const links = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
-links[0].addEventListener("click", () => {
+const contentCertificates = `
+<object data="/assets/certificates.pdf?#pagemode=bookmarks&zoom=85" type="application/pdf">
+    <p>You don't have a PDF plugin, but you can <a href="/assets/certificates.pdf">download the PDF file.</a></p>
+</object>`;
+
+const linksMenu = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
+const linksMenuBottom = document.getElementsByClassName("menu_bottom")[0].getElementsByTagName("a");
+const elementMenuBottom = document.getElementsByClassName("menu_bottom")[0];
+
+const menu_bottom = {
+    show: (flag) => elementMenuBottom.classList.toggle('hidden', !flag),
+    active: (flag) => {
+        linksMenuBottom[0].classList.toggle('active', flag);
+        linksMenuBottom[1].classList.toggle('active', !flag);
+    }
+}
+
+linksMenu[0].addEventListener("click", () => {
+    menu_bottom.show(false);
 	content.innerHTML = contentHome;
 });
-links[1].addEventListener("click", () => {
+linksMenu[1].addEventListener("click", () => {
+    menu_bottom.show(false);
 	content.innerHTML = contentProjects;
 });
-links[2].addEventListener("click", () => {
+linksMenu[2].addEventListener("click", () => {
+    menu_bottom.show(true);
+    menu_bottom.active(true);
+	content.innerHTML = contentCertificatesList;
+});
+linksMenuBottom[0].addEventListener("click", () => {
+    menu_bottom.active(true);
+	content.innerHTML = contentCertificatesList;
+});
+linksMenuBottom[1].addEventListener("click", () => {
+    menu_bottom.active(false);
 	content.innerHTML = contentCertificates;
 });
