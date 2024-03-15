@@ -1120,12 +1120,16 @@ table td {
 	max-height: 95vh;
 }
 
+.content a {
+	text-decoration: none;
+}
+
 .menu_bottom > a {
 	margin: 10px;
 	text-decoration: none;
 }
 
 .menu_bottom a:hover,
-.menu_bottom .active{
+.menu_bottom .active {
 	text-decoration: underline;
 }
