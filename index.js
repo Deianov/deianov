@@ -6,6 +6,7 @@ const contentProjects = `<main aria-role="main">
     <thead>
         <tr>
             <th>Name</th>
+            <th>Technologies</th>
             <th>Source code</th>
             <th>Url</th>
         </tr>
@@ -13,17 +14,20 @@ const contentProjects = `<main aria-role="main">
     <tbody>
         <tr>
             <td>learning-style</td>
+            <td>Java, JS</td>
             <td><a href="https://github.com/deianov/learning-style" target="_blank">github</a></td>
-            <td><a href="https://learning-style.com" target="_blank">learning-style.com</a></td>
         </tr>
         <tr>
             <td>private</td>
+            <td>JS, SVG</td>
             <td><a href="https://github.com/Deianov/deianov/tree/main/private" target="_blank">github</a></td>
             <td><a href="https://deianov.com/private">deianov.com/private</a></td>
         </tr>
         <tr>
-            <td>learning-style-ts</td>
+            <td>learning-style</td>
+            <td>TS</td>
             <td><a href="https://github.com/deianov/learning-style-ts" target="_blank">github</a></td>
+            <td><a href="https://learning-style.com" target="_blank">learning-style.com</a></td>
     </tr>
     </tbody>
 </table>
@@ -42,31 +46,31 @@ const linksMenuBottom = document.getElementsByClassName("menu_bottom")[0].getEle
 const elementMenuBottom = document.getElementsByClassName("menu_bottom")[0];
 
 const menu_bottom = {
-    show: (flag) => elementMenuBottom.classList.toggle('hidden', !flag),
-    active: (flag) => {
-        linksMenuBottom[0].classList.toggle('active', flag);
-        linksMenuBottom[1].classList.toggle('active', !flag);
-    }
-}
+	show: (flag) => elementMenuBottom.classList.toggle("hidden", !flag),
+	active: (flag) => {
+		linksMenuBottom[0].classList.toggle("active", flag);
+		linksMenuBottom[1].classList.toggle("active", !flag);
+	},
+};
 
 linksMenu[0].addEventListener("click", () => {
-    menu_bottom.show(false);
+	menu_bottom.show(false);
 	content.innerHTML = contentHome;
 });
 linksMenu[1].addEventListener("click", () => {
-    menu_bottom.show(false);
+	menu_bottom.show(false);
 	content.innerHTML = contentProjects;
 });
 linksMenu[2].addEventListener("click", () => {
-    menu_bottom.show(true);
-    menu_bottom.active(true);
+	menu_bottom.show(true);
+	menu_bottom.active(true);
 	content.innerHTML = contentCertificatesList;
 });
 linksMenuBottom[0].addEventListener("click", () => {
-    menu_bottom.active(true);
+	menu_bottom.active(true);
 	content.innerHTML = contentCertificatesList;
 });
 linksMenuBottom[1].addEventListener("click", () => {
-    menu_bottom.active(false);
+	menu_bottom.active(false);
 	content.innerHTML = contentCertificates;
 });
