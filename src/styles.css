@@ -1095,12 +1095,12 @@ main > .content {
     table td:nth-child(1) {
         display: none;
     }
-    main::before {
+    /* main::before {
         margin: 0;
         font-size: 0.9rem;
         color: green;
         content: 'Please use a tablet or PC to view this content.';
-    }
+    } */
 }
 main.dark-theme {
     background-color: #292a2d;
