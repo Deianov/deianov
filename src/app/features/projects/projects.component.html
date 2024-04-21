@@ -1,29 +1,31 @@
 <main aria-role="main">
-  <h2>List of my projects</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Technologies</th>
-        <th>Source code</th>
-        <th>Url</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (project of projects | async; track $index) {
-      <tr>
-        <td>{{ project.name }}</td>
-        <td>{{ project.technologies }}</td>
-        <td>
-          <a href="{{ project.source }}" target="_blank">github</a>
-        </td>
-        <td>
-          <a href="{{ project.page }}" target="_blank">{{
-            removeHttps(project.page)
-          }}</a>
-        </td>
-      </tr>
-      }
-    </tbody>
-  </table>
+    <h2>List of my projects</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Technologies</th>
+                <th>Source code</th>
+                <th>Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (project of projects | async; track $index) {
+            <tr>
+                <td>{{ project.name }}</td>
+                <td>{{ project.technologies }}</td>
+                <td>
+                    <a href="{{ project.source }}" target="_blank">github</a>
+                </td>
+                <td>
+                    @if (project.page.startsWith("/")) {
+                    <a routerLink="{{ project.page }}">{{ project.page }}</a>
+                    }@else {
+                    <a href="{{ project.page }}" target="_blank">{{ removeHttps(project.page) }}</a>
+                    }
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
 </main>
