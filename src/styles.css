@@ -1067,72 +1067,65 @@ hr {
     padding: 0 15px;
 }
 
-table {
-    width: 100%;
-}
-table th,
-table td {
-    text-align: left;
-    padding: 0.2rem 3rem 0.2rem 0;
-    white-space: nowrap;
-}
-
 /* Main */
 
-.container {
+main {
     flex: 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    height: 100vh;
 }
-.container.dark-theme {
-    background-color: #292a2d;
-    color: #a9a9b3;
+main > * {
+    display: block;
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    flex: 1 auto;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
-}
-@media (max-width: 684px) {
-    main {
-        margin-top: 0;
-    }
-}
-
-.content {
+main > .content {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 80vh;
 }
 
-.content > * {
-    max-width: 95vw;
-    max-height: 95vh;
+@media (max-width: 684px) {
+    main {
+        margin-top: 0;
+    }
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        display: none;
+    }
+    main::before {
+        margin: 0;
+        font-size: 0.9rem;
+        color: green;
+        content: 'Please use a tablet or PC to view this content.';
+    }
 }
-
-.content a {
-    text-decoration: none;
-}
-
-.header {
-    margin-bottom: 1rem;
+main.dark-theme {
+    background-color: #292a2d;
+    color: #a9a9b3;
 }
 
 .tabs a {
     margin: 10px;
-    text-decoration: none;
 }
-
 .tabs a:hover,
 .tabs a:active,
 .tabs a.active {
     text-decoration: underline;
+}
+
+.content {
+    height: 90vh;
+    max-width: 100vw;
+}
+
+/* router-outlet */
+.content > * {
+    max-width: 95vw;
+    max-height: 90vh;
+}
+.content a {
+    text-decoration: none;
 }
