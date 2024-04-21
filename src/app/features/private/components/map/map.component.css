@@ -1,0 +1,38 @@
+.outer {
+  min-width: 85vw;
+  max-width: 95vw;
+  height: 75vh;
+
+  background-color: transparent;
+  border-radius: 4px 4px 0 0;
+  tab-size: 4;
+  word-wrap: break-word;
+  position: relative;
+  padding: 45px 10px 15px;
+  margin: 0 -8px 15px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #a9a9b3;
+}
+
+.outer:after {
+  content: "google maps";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.canvas {
+  overflow: hidden;
+  background: none !important;
+}
+
+.canvas,
+iframe {
+  border: none;
+  width: 100%;
+  height: 68.8vh;
+}

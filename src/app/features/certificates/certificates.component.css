@@ -1,0 +1,18 @@
+/* :host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60vw;
+  height: 75vh;
+} */
+
+.pdf {
+  width: auto;
+  height: 75vh;
+
+  aspect-ratio: 4 / 3;
+  margin: 0px auto !important;
+  padding: 0;
+}

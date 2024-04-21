@@ -1,0 +1,1 @@
+import{$a as r,V as o,_a as i,ib as a,nb as s}from"./chunk-PVUL4O5R.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-blog"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,p){n&1&&(i(0,"p"),a(1,"The blog page is currently under construction."),r())}});let t=e;return t})();export{d as BlogComponent};
