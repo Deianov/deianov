@@ -2,19 +2,23 @@
     <a href="#" (click)="selectTab(true)" [ngClass]="{active: isList}">List</a>
     <a href="#" (click)="selectTab(false)" [ngClass]="{active: !isList}">Certificates</a>
 </div>
-@if (isList) {
+@if (isList) { @defer () {
+
 <object class="pdf" data="/assets/pdf/certificates_list.pdf?#zoom=85" type="application/pdf">
     <p>
         You don't have a PDF plugin, but you can
         <a href="/assets/pdf/certificates_list.pdf">download the PDF file.</a>
     </p>
 </object>
-} @else {
-<!-- view=fit -->
+}@placeholder (minimum 1000){
+<app-loader></app-loader>
+} } @else { @defer () {
 <object class="pdf" data="/assets/pdf/certificates.pdf?#zoom=85" type="application/pdf">
     <p>
         You don't have a PDF plugin, but you can
         <a href="/assets/pdf/certificates.pdf">download the PDF file.</a>
     </p>
 </object>
-}
+}@placeholder (minimum 1000){
+<app-loader></app-loader>
+} }
