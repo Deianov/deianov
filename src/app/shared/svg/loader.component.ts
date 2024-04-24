@@ -1,5 +1,4 @@
-import {Component, inject, input} from '@angular/core';
-import {ThemeService} from '@core/services/theme.service';
+import {Component, input} from '@angular/core';
 
 @Component({
     standalone: true,
@@ -11,11 +10,16 @@ import {ThemeService} from '@core/services/theme.service';
         justify-content: center;
         text-align: center;
     }
+    .dark-theme :host {
+      fill: white;
+    }
+    .light-theme :host {
+      fill: black;
+    }
     `,
 })
 export class LoaderComponent {
-    private defaultColor = inject(ThemeService).isDark ? 'white' : 'black';
     private defaultSize = 48;
-    color = input<string>(this.defaultColor);
     size = input<number>(this.defaultSize);
+    color = input<string>();
 }
