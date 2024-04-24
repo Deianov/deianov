@@ -1,8 +1,7 @@
 import {AsyncPipe} from '@angular/common';
 import {Component, inject} from '@angular/core';
 import {RouterLink} from '@angular/router';
-
-import {DataService} from '../../core/services/data.service';
+import {DataService} from '@core';
 
 @Component({
     selector: 'app-projects',
