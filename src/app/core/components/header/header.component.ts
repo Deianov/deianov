@@ -18,15 +18,19 @@ export class HeaderComponent {
 
     theme: ModelSignal<string> = model.required<string>();
 
-    showMenuTrigger = this.mobileService.isMobile();
-    showMenu = !this.showMenuTrigger;
+    showMenuTrigger = false;
+    showMenu = false;
+
+    constructor() {
+        this.onResize();
+    }
 
     themeToggle() {
         this.themeService.themeToggle();
         this.theme.set(this.themeService.currentTheme);
     }
 
-    onResize = (event: Event) => {
+    onResize = (event?: Event) => {
         this.showMenuTrigger = this.mobileService.isMobile();
         this.showMenu = !this.showMenuTrigger;
     };
