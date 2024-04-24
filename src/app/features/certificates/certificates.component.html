@@ -1,6 +1,6 @@
 <div class="tabs">
-    <a href="#" (click)="selectTab(true)" [ngClass]="{active: isList}">List</a>
-    <a href="#" (click)="selectTab(false)" [ngClass]="{active: !isList}">Certificates</a>
+    <a href="#" (click)="selectTab(true)" [class.active]="isList">List</a>
+    <a href="#" (click)="selectTab(false)" [class.active]="!isList">Certificates</a>
 </div>
 @if (isList) { @defer () {
 

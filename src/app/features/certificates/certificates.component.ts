@@ -1,11 +1,10 @@
-import {NgClass} from '@angular/common';
 import {Component} from '@angular/core';
 import {LoaderComponent} from '@shared/svg/loader.component';
 
 @Component({
     selector: 'app-certificates',
     standalone: true,
-    imports: [NgClass, LoaderComponent],
+    imports: [LoaderComponent],
     templateUrl: './certificates.component.html',
     styleUrl: './certificates.component.css',
 })
