@@ -27,8 +27,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/sitemap.txt",
-              "src/CNAME"
+              "src/sitemap.txt"
             ],
             "styles": [
               "src/styles.css"
