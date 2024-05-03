@@ -1,18 +1,17 @@
-import {AsyncPipe, NgClass} from '@angular/common';
-import {Component, inject} from '@angular/core';
-import {DataService} from '@core';
+import { AsyncPipe, NgClass } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { DataService } from '@core';
 
-import {MapComponent} from './components/map/map.component';
-import {PlanComponent} from './components/plan/plan.component';
-import {Layer} from './private.enums';
-import {IPrivateAdapted} from './private.model';
+import { MapComponent } from './components/map/map.component';
+import { PlanComponent } from './components/plan/plan.component';
+import { Layer } from './private.enums';
+import { IPrivateAdapted } from './private.model';
 
 @Component({
     selector: 'app-private',
     standalone: true,
     imports: [AsyncPipe, NgClass, PlanComponent, MapComponent],
     templateUrl: './private.component.html',
-    styleUrl: './private.component.css',
 })
 export class PrivateComponent {
     #dataService = inject(DataService);
