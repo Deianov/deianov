@@ -1,104 +1,109 @@
+:host {
+    display: flex;
+    flex: 1 1 100%;
+    min-height: 0;
+    padding: 0 10px;
+}
+
 svg {
-  min-width: 75vw;
-  max-width: 95vw;
-  height: 75vh;
+    flex: 1 1 100%;
+    /* max-height: 80vh; */
 }
 
 .none {
-  display: none;
+    display: none;
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
+    display: inline;
 }
 
 .title span {
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
 }
 
 .list {
-  stroke-width: 0.5;
+    stroke-width: 0.5;
 }
 
 .wall path {
-  fill: #333333;
-  stroke: white;
-  stroke-width: 0.95;
+    fill: #333333;
+    stroke: white;
+    stroke-width: 0.95;
 }
 
 .view path {
-  stroke: #00b6ff; /* #00B6FF #00C0C3 */
-  stroke-width: 0.55;
+    stroke: #00b6ff; /* #00B6FF #00C0C3 */
+    stroke-width: 0.55;
 }
 
 .line path {
-  stroke: white;
-  stroke-width: 0.5;
+    stroke: white;
+    stroke-width: 0.5;
 }
 
 .dashed {
-  stroke: #5b5b5b;
-  stroke-width: 1;
-  stroke-dasharray: 5 2;
+    stroke: #5b5b5b;
+    stroke-width: 1;
+    stroke-dasharray: 5 2;
 }
 
 text {
-  fill: #c0c5ce;
-  font-style: normal;
-  font-size: 0.63rem;
-  font-weight: 500;
+    fill: #c0c5ce;
+    font-style: normal;
+    font-size: 0.63rem;
+    font-weight: 500;
 }
 
 text.title {
-  font-size: 1rem;
-  font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .total text {
-  transform: translateY(-0.35rem);
+    transform: translateY(-0.35rem);
 }
 
 path.white {
-  stroke: white;
-  stroke-width: 1.5;
+    stroke: white;
+    stroke-width: 1.5;
 }
 
 path.blue {
-  stroke: #011efe;
-  stroke-width: 1.5;
+    stroke: #011efe;
+    stroke-width: 1.5;
 }
 
 path.green,
 g.green path {
-  stroke: #00ff00;
-  stroke-width: 1.5;
+    stroke: #00ff00;
+    stroke-width: 1.5;
 }
 
 /*  ---------- layers -------------------- */
 
 .buttons circle {
-  stroke: currentColor;
-  stroke-width: 1.5;
-  cursor: pointer;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    cursor: pointer;
 }
 
 .white {
-  color: white;
+    color: white;
 }
 
 .blue {
-  color: #011efe;
+    color: #011efe;
 }
 
 .green {
-  color: #00ff00;
+    color: #00ff00;
 }
 
 .buttons circle:active,
 .buttons circle.active,
 .buttons circle:hover {
-  fill: currentColor;
+    fill: currentColor;
 }
