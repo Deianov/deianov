@@ -459,38 +459,21 @@ main {
     justify-content: center;
     text-align: center;
     height: 100vh;
+    height: 100dvh;
     flex-wrap: nowrap;
 }
 main > * {
     flex: 1;
 }
 main > *:nth-child(1) {
-    flex-basis: 7vh;
-    flex-basis: 7dvh;
+    flex-basis: 7%;
 }
 main > *:nth-child(2) {
-    flex-basis: 86vh;
-    flex-basis: 86dvh;
+    flex-basis: 86%;
     min-height: 0;
 }
 main > *:nth-child(3) {
-    flex-basis: 7vh;
-    flex-basis: 7dvh;
-}
-@media (max-width: 684px) {
-    main {
-        margin-top: 0;
-    }
-    table th:nth-child(1),
-    table td:nth-child(1) {
-        display: none;
-    }
-    /* main::before {
-        margin: 0;
-        font-size: 0.9rem;
-        color: green;
-        content: 'Please use a tablet or PC to view this content.';
-    } */
+    flex-basis: 7%;
 }
 main.dark-theme {
     background-color: #292a2d;
@@ -518,6 +501,28 @@ main.dark-theme {
 
 .content a {
     text-decoration: none;
+}
+
+@media (max-width: 684px) {
+    main {
+        margin-top: 0;
+    }
+    .content > *:last-child {
+        padding-top: 10px;
+    }
+    .tabs {
+        padding-top: 0;
+    }
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        display: none;
+    }
+    /* main::before {
+        margin: 0;
+        font-size: 0.9rem;
+        color: green;
+        content: 'Please use a tablet or PC to view this content.';
+    } */
 }
 
 /*  Override in components  */
