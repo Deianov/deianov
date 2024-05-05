@@ -1,23 +1,43 @@
-h2 {
-    display: block;
+:host {
+    align-items: center;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h2,
+table {
+    padding-left: 8px;
+}
+
 .table-scrollable {
     overflow-y: auto;
-    margin: 0 0 1em;
     width: 100%;
 }
 table {
-    max-width: 95vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 8px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
 }
 table th,
 table td {
     text-align: left;
     padding: 0.2rem 3rem 0.2rem 0;
 }
-
 table th {
     color: #66545e;
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+    table {
+        font-size: 0.8rem;
+    }
+    table th,
+    table td {
+        padding: 0.2rem 1.2rem 0.2rem 0;
+    }
 }

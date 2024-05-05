@@ -30,7 +30,6 @@ export class HeaderComponent {
     }
 
     onResize = (event?: Event) => {
-        this.mobileService.setViewportHeight();
         this.showMenuTrigger = this.mobileService.isMobile();
         this.showMenu = !this.showMenuTrigger;
     };

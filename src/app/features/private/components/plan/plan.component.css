@@ -1,6 +1,6 @@
 :host {
     display: flex;
-    flex: 1 1 100%;
+    flex-direction: column;
     min-height: 0;
     padding: 0 10px;
 }
@@ -83,12 +83,6 @@ g.green path {
 
 /*  ---------- layers -------------------- */
 
-.buttons circle {
-    stroke: currentColor;
-    stroke-width: 1.5;
-    cursor: pointer;
-}
-
 .white {
     color: white;
 }
@@ -101,8 +95,27 @@ g.green path {
     color: #00ff00;
 }
 
-.buttons circle:active,
-.buttons circle.active,
-.buttons circle:hover {
-    fill: currentColor;
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.buttons > div {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+
+    aspect-ratio: 1;
+    border: 1.6px solid currentColor;
+    border-radius: 50%;
+    background: none;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buttons > div.active {
+    background-color: currentColor;
+    box-shadow: 0 0 2px darkslategray;
 }

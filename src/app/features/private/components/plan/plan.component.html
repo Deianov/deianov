@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-    <path class="list" stroke="currentColor" d="m795 592.85l0-585.7-790 0 0 585.7 790 0z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 530">
+    <path class="list" stroke="currentColor" d="m795 522.85l0-515.7-790 0 0 515.7 790 0z" />
 
     <text class="title" x="30" y="40">{{ data().title }}</text>
 
@@ -170,9 +170,14 @@
         </g>
         <path class="green" d="m306.79 430.8l79.78 0" />
     </g>
-    <g class="buttons">
+    <!-- <g class="buttons">
         <circle (click)="setLayer(Layer.WHITE)" [class.active]="layer() === Layer.WHITE" class="white" cx="350" cy="550" r="20" />
         <circle (click)="setLayer(Layer.BLUE)" [class.active]="layer() === Layer.BLUE" class="blue" cx="410" cy="550" r="20" />
         <circle (click)="setLayer(Layer.GREEN)" [class.active]="layer() === Layer.GREEN" class="green" cx="470" cy="550" r="20" />
-    </g>
+    </g> -->
 </svg>
+<div class="buttons">
+    <div (click)="setLayer(Layer.WHITE)" class="white" [class.active]="layer() === Layer.WHITE"></div>
+    <div (click)="setLayer(Layer.BLUE)" class="blue" [class.active]="layer() === Layer.BLUE"></div>
+    <div (click)="setLayer(Layer.GREEN)" class="green" [class.active]="layer() === Layer.GREEN"></div>
+</div>

@@ -327,8 +327,16 @@ template {
     margin-right: 0;
 }
 
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding-top: 15px;
+}
+
 .tabs a {
-    margin: 10px;
+    margin: 0 10px;
 }
 .tabs a:hover,
 .tabs a:active,
@@ -458,14 +466,16 @@ main > * {
 }
 main > *:nth-child(1) {
     flex-basis: 7vh;
+    flex-basis: 7dvh;
 }
 main > *:nth-child(2) {
     flex-basis: 86vh;
-    flex-basis: calc(var(--vh, 1vh) * 86);
+    flex-basis: 86dvh;
     min-height: 0;
 }
 main > *:nth-child(3) {
     flex-basis: 7vh;
+    flex-basis: 7dvh;
 }
 @media (max-width: 684px) {
     main {
@@ -508,4 +518,14 @@ main.dark-theme {
 
 .content a {
     text-decoration: none;
+}
+
+/*  Override in components  */
+
+.light-theme app-private .white {
+    color: black;
+}
+
+app-loader {
+    padding: 20px;
 }

@@ -1,7 +1,7 @@
 <div class="tabs">
-    <a href="#" (click)="setLevel(1)" [class.active]="level === 1 && !showMap">First floor</a>
+    <a href="#" (click)="setLevel(1)" [class.active]="level === 1 && !showMap">Floor</a>
     <a href="#" (click)="setLevel(2)" [class.active]="level === 2 && !showMap">Attic</a>
-    <a href="#" (click)="setMap()" [class.active]="showMap">Google maps</a>
+    <a href="#" (click)="setMap()" [class.active]="showMap">Map</a>
 </div>
 
 @if (showMap) {

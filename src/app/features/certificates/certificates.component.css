@@ -2,10 +2,6 @@
     text-align: center;
 }
 
-:host > div {
-    padding-top: 15px;
-}
-
 .pdf {
     width: 100%;
     height: auto;
@@ -18,8 +14,4 @@
 p > a {
     color: #21759b;
     font-weight: 700;
-}
-
-app-loader {
-    padding: 20px;
 }
