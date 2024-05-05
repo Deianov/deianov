@@ -119,6 +119,7 @@ template {
 :root {
     --phoneWidth: (max-width: 684px);
     --tabletWidth: (max-width: 900px);
+    --vh: 1vh;
 }
 @font-face {
     font-family: inter ui;
@@ -166,7 +167,7 @@ template {
 /*   HEADER   */
 
 .header {
-    /* background: #fafafa; */
+    background: #fafafa;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,6 +461,7 @@ main > *:nth-child(1) {
 }
 main > *:nth-child(2) {
     flex-basis: 86vh;
+    flex-basis: calc(var(--vh, 1vh) * 86);
     min-height: 0;
 }
 main > *:nth-child(3) {

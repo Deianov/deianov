@@ -4,12 +4,13 @@ h2 {
 .table-scrollable {
     overflow-y: auto;
     margin: 0 0 1em;
-    max-width: 95vw;
+    width: 100%;
 }
 table {
     max-width: 95vw;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 8px !important;
 }
 table th,
 table td {

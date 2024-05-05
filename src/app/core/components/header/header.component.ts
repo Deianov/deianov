@@ -1,9 +1,9 @@
-import { Component, inject, model, ModelSignal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MobileService } from '@core/services/mobile.service';
-import { ThemeService } from '@core/services/theme.service';
+import {Component, inject, model, ModelSignal} from '@angular/core';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+import {MobileService} from '@core/services/mobile.service';
+import {ThemeService} from '@core/services/theme.service';
 
-import { NavComponent } from '../nav/nav.component';
+import {NavComponent} from '../nav/nav.component';
 
 @Component({
     selector: 'app-header',
@@ -30,6 +30,7 @@ export class HeaderComponent {
     }
 
     onResize = (event?: Event) => {
+        this.mobileService.setViewportHeight();
         this.showMenuTrigger = this.mobileService.isMobile();
         this.showMenu = !this.showMenuTrigger;
     };

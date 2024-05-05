@@ -1,12 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class MobileService {
-  private mobileQuery = getComputedStyle(document.body).getPropertyValue(
-    '--phoneWidth'
-  );
+    private mobileQuery = getComputedStyle(document.body).getPropertyValue('--phoneWidth');
 
-  isMobile = () => window.matchMedia(this.mobileQuery).matches;
+    setViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    isMobile = () => window.matchMedia(this.mobileQuery).matches;
 }

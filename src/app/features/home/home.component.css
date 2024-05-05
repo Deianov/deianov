@@ -1,3 +1,4 @@
-:host {
-    justify-content: center;
+:host > *:first-child {
+    /* justify-content: center; */
+    padding-top: 10vh;
 }
