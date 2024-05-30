@@ -464,17 +464,13 @@ main {
 }
 main > * {
     flex: 1;
-}
-main > *:nth-child(1) {
     flex-basis: 7%;
 }
 main > *:nth-child(2) {
     flex-basis: 86%;
     min-height: 0;
 }
-main > *:nth-child(3) {
-    flex-basis: 7%;
-}
+
 main.dark-theme {
     background-color: #292a2d;
     color: #a9a9b3;
