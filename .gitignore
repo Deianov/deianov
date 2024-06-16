@@ -47,3 +47,6 @@ logs
 # System files
 .DS_Store
 Thumbs.db
+
+# Ignore tests
+*.spec.ts
