@@ -17,11 +17,7 @@ export const strings = {
   /**
    * @returns {boolean} true: 'a' === 'A', 'a' === 'ä'
    */
-  localeCompare(
-    str1: string,
-    str2: string,
-    options?: Intl.CollatorOptions | undefined
-  ): boolean {
+  localeCompare(str1: string, str2: string, options?: Intl.CollatorOptions | undefined): boolean {
     const DEFAULT_OPTIONS: Intl.CollatorOptions = { sensitivity: 'base' };
     return str1.localeCompare(str2, 'en', options || DEFAULT_OPTIONS) === 0;
   },

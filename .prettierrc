@@ -1,0 +1,34 @@
+{
+  "experimentalTernaries": false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "arrowParens": "always",
+  "requirePragma": false,
+  "insertPragma": false,
+  "proseWrap": "preserve",
+  "endOfLine":"auto",
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": false,
+  "overrides": [
+     {
+        "files": "*.html",
+        "options": {
+           "parser": "angular",
+           "htmlWhitespaceSensitivity": "strict"
+        }
+     },
+     {
+        "files": ".prettierrc",
+        "options": {
+           "parser": "json"
+        }
+     }
+  ]
+}

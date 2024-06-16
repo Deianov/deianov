@@ -1,11 +1,11 @@
 <div class="tabs">
-    <a href="#" (click)="setLevel(1)" [class.active]="level === 1 && !showMap">Floor</a>
-    <a href="#" (click)="setLevel(2)" [class.active]="level === 2 && !showMap">Attic</a>
-    <a href="#" (click)="setMap()" [class.active]="showMap">Map</a>
+  <a href="#" (click)="setLevel(1)" [class.active]="level === 1 && !showMap">Floor</a>
+  <a href="#" (click)="setLevel(2)" [class.active]="level === 2 && !showMap">Attic</a>
+  <a href="#" (click)="setMap()" [class.active]="showMap">Map</a>
 </div>
 
 @if (showMap) {
-<app-map [url]="data.google"></app-map>
-}@else {
-<app-plan [level]="level" [(layer)]="layer" [data]="data"></app-plan>
+  <app-map [url]="data.google"></app-map>
+} @else {
+  <app-plan [level]="level" [(layer)]="layer" [data]="data"></app-plan>
 }

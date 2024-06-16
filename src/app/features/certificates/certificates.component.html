@@ -1,24 +1,33 @@
 <div class="tabs">
-    <a href="#" (click)="selectTab(true)" [class.active]="isList">List</a>
-    <a href="#" (click)="selectTab(false)" [class.active]="!isList">Certificates</a>
+  <a href="#" (click)="selectTab(true)" [class.active]="isList">List</a>
+  <a href="#" (click)="selectTab(false)" [class.active]="!isList">Certificates</a>
 </div>
-@if (isList) { @defer () {
-
-<object class="pdf" data="/assets/pdf/certificates_list.pdf?#zoom=85&navpanes=0" type="application/pdf">
-    <p>
+@if (isList) {
+  @defer {
+    <object
+      class="pdf"
+      data="/assets/pdf/certificates_list.pdf?#zoom=85&navpanes=0"
+      type="application/pdf">
+      <p>
         You don't have a PDF plugin, but you can
         <a href="/assets/pdf/certificates_list.pdf">download the PDF file.</a>
-    </p>
-</object>
-}@placeholder (minimum 1000){
-<app-loader></app-loader>
-} } @else { @defer () {
-<object class="pdf" data="/assets/pdf/certificates.pdf?#zoom=85&navpanes=0" type="application/pdf">
-    <p>
+      </p>
+    </object>
+  } @placeholder (minimum 1000) {
+    <app-loader></app-loader>
+  }
+} @else {
+  @defer {
+    <object
+      class="pdf"
+      data="/assets/pdf/certificates.pdf?#zoom=85&navpanes=0"
+      type="application/pdf">
+      <p>
         You don't have a PDF plugin, but you can
         <a href="/assets/pdf/certificates.pdf">download the PDF file.</a>
-    </p>
-</object>
-}@placeholder (minimum 1000){
-<app-loader></app-loader>
-} }
+      </p>
+    </object>
+  } @placeholder (minimum 1000) {
+    <app-loader></app-loader>
+  }
+}

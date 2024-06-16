@@ -8,38 +8,29 @@ export const routes: Routes = [
   {
     path: 'blog',
     title: 'Blog',
-    loadComponent: () =>
-      import('./features/blog/blog.component').then((m) => m.BlogComponent),
+    loadComponent: () => import('./features/blog/blog.component').then((m) => m.BlogComponent),
   },
   {
     path: 'projects',
     title: 'Projects',
     loadComponent: () =>
-      import('./features/projects/projects.component').then(
-        (m) => m.ProjectsComponent
-      ),
+      import('./features/projects/projects.component').then((m) => m.ProjectsComponent),
   },
   {
     path: 'certificates',
     title: 'Certificates',
     loadComponent: () =>
-      import('./features/certificates/certificates.component').then(
-        (m) => m.CertificatesComponent
-      ),
+      import('./features/certificates/certificates.component').then((m) => m.CertificatesComponent),
   },
   {
     path: 'private',
     title: 'Private',
     loadComponent: () =>
-      import('./features/private/private.component').then(
-        (m) => m.PrivateComponent
-      ),
+      import('./features/private/private.component').then((m) => m.PrivateComponent),
   },
   {
     path: '**',
     loadComponent: () =>
-      import('./core/components/page-not-found.component').then(
-        (m) => m.PageNotFoundComponent
-      ),
+      import('./core/components/page-not-found.component').then((m) => m.PageNotFoundComponent),
   },
 ];
