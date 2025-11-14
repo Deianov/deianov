@@ -8,7 +8,7 @@ import { NavComponent } from '../nav/nav.component';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NavComponent],
+  imports: [RouterLink, NavComponent],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {

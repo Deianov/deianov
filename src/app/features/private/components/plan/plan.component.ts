@@ -1,4 +1,3 @@
-import { DecimalPipe } from '@angular/common';
 import { Component, computed, input, model } from '@angular/core';
 import { Layer } from '@features/private/private.enums';
 import { IPrivateAdapted } from '@features/private/private.model';
@@ -6,7 +5,6 @@ import { IPrivateAdapted } from '@features/private/private.model';
 @Component({
   selector: 'app-plan',
   standalone: true,
-  imports: [DecimalPipe],
   templateUrl: './plan.component.html',
   styleUrl: './plan.component.css',
 })

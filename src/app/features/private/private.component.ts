@@ -1,4 +1,3 @@
-import { AsyncPipe, NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { DataService } from '@core';
 
@@ -10,7 +9,7 @@ import { IPrivateAdapted } from './private.model';
 @Component({
   selector: 'app-private',
   standalone: true,
-  imports: [AsyncPipe, NgClass, PlanComponent, MapComponent],
+  imports: [PlanComponent, MapComponent],
   templateUrl: './private.component.html',
 })
 export class PrivateComponent {
