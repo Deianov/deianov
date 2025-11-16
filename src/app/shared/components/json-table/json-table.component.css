@@ -1,0 +1,13 @@
+:host tr[flag='1'] td:nth-child(3) {
+  font-weight: bolder;
+  color: #517cc6;
+}
+
+:host tr[flag='-1'] td:nth-child(3) {
+  /* font-weight: bold; */
+  color: red;
+}
+
+:host tr[flag='0'] {
+  color: #959595;
+}

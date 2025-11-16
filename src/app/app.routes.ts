@@ -29,6 +29,12 @@ export const routes: Routes = [
       import('./features/private/private.component').then((m) => m.PrivateComponent),
   },
   {
+    path: 'garden',
+    title: 'Garden',
+    loadComponent: () =>
+      import('./features/garden/garden.component').then((m) => m.GardenComponent),
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./core/components/page-not-found.component').then((m) => m.PageNotFoundComponent),

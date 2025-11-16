@@ -23,6 +23,12 @@ export const projects = [
     source: 'https://github.com/Deianov/deianov',
     page: '/private',
   },
+  {
+    name: 'deianov/garden',
+    technologies: 'Angular',
+    source: 'https://github.com/Deianov/garden',
+    page: '/garden',
+  },
 ] as const;
 
 export const private_data = {

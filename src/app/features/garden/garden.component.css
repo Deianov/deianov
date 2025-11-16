@@ -1,0 +1,15 @@
+app-garden h2 {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+app-garden {
+  margin: 0 30px;
+  font-size: 13px;
+}
+
+main {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}

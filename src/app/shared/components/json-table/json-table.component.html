@@ -1,0 +1,22 @@
+<!-- <table border="1" cellpadding="6"> -->
+<table border="1">
+  <thead>
+    <tr>
+      @for (key of tableColumns(); track $index) {
+        <th>{{ key }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (row of tableData(); track $index) {
+      <tr
+        [attr.flag]="
+          setRowAttrFromCell && row[setRowAttrFromCell] ? row[setRowAttrFromCell] : null
+        ">
+        @for (key of tableColumns(); track $index) {
+          <td>{{ row[key] }}</td>
+        }
+      </tr>
+    }
+  </tbody>
+</table>
