@@ -13,3 +13,17 @@ main {
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+json-table tr[flag='1'] td:nth-child(3) {
+  font-weight: bolder;
+  color: #517cc6;
+}
+
+json-table tr[flag='-1'] td:nth-child(3) {
+  /* font-weight: bold; */
+  color: red;
+}
+
+json-table tr[flag='0'] {
+  color: #959595;
+}
