@@ -2,18 +2,18 @@
 <table border="1">
   <thead>
     <tr>
-      @for (key of tableColumns(); track $index) {
+      @for (key of columns; track $index) {
         <th>{{ key }}</th>
       }
     </tr>
   </thead>
   <tbody>
-    @for (row of tableData(); track $index) {
+    @for (row of localData(); track $index) {
       <tr
         [attr.flag]="
-          setRowAttrFromCell && row[setRowAttrFromCell] ? row[setRowAttrFromCell] : null
+          setRowAttribute && row[setRowAttribute.fromCell] ? row[setRowAttribute.fromCell] : null
         ">
-        @for (key of tableColumns(); track $index) {
+        @for (key of columns; track $index) {
           <td>{{ row[key] }}</td>
         }
       </tr>

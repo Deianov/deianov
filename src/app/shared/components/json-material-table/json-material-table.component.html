@@ -1,6 +1,6 @@
-<table mat-table [dataSource]="tableData()" matSort class="mat-elevation-z8">
+<table mat-table [dataSource]="localData()" matSort class="mat-elevation-z8">
   <!-- Dynamic column definitions -->
-  @for (col of tableColumns(); track col) {
+  @for (col of columns; track col) {
     <ng-container [matColumnDef]="col">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>
         {{ col }}
@@ -12,6 +12,6 @@
     </ng-container>
   }
 
-  <tr mat-header-row *matHeaderRowDef="tableColumns()"></tr>
-  <tr mat-row *matRowDef="let row; columns: tableColumns()"></tr>
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+  <tr mat-row *matRowDef="let row; columns: columns"></tr>
 </table>

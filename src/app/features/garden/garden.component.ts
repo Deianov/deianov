@@ -1,19 +1,20 @@
 import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { DataService } from '@core';
+import { JsonMaterialTableComponent } from '@shared/components/json-material-table/json-material-table.component';
 import { JsonTableComponent } from '@shared/components/json-table/json-table.component';
 
 @Component({
   selector: 'app-garden',
   standalone: true,
-  imports: [JsonTableComponent],
+  imports: [JsonTableComponent, JsonMaterialTableComponent],
   templateUrl: './garden.component.html',
   styleUrl: './garden.component.css',
   encapsulation: ViewEncapsulation.None,
 })
 export class GardenComponent {
-  private platsUrl = 'assets/json/plants.json';
+  readonly #platsUrl = 'assets/json/plants.json';
 
-  setRowAttrFromCell = 'Flag';
+  readonly setRowAttributeFromCell = { key: 'flag', fromCell: 'Flag' };
 
-  plants = inject(DataService).getJson(this.platsUrl, []);
+  readonly plants = inject(DataService).getJson(this.#platsUrl, []);
 }
