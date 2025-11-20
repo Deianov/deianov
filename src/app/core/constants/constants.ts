@@ -26,7 +26,7 @@ export const projects = [
   {
     name: 'deianov/garden',
     technologies: 'Angular',
-    source: 'https://github.com/Deianov/garden',
+    source: 'https://github.com/Deianov/deianov',
     page: '/garden',
   },
 ] as const;
