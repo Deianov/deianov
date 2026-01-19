@@ -32,7 +32,7 @@ export const projects = [
 ] as const;
 
 export const private_data = {
-  title: '0YPQuy4g0JvRjtCx0LXQvSDQmtCw0YDQsNCy0LXQu9C+0LIg4oSWIDUt0LAsINC10YIuIDY=',
+  title: '',
   floor_rooms:
     'O9C00L3QtdCy0L3QsDvRgdGC0YrQu9Cx0Lg70YHQv9Cw0LvQvdGPO9GC0LXRgNCw0YHQsDvQsdCw0LvQutC+0L070LrRg9GF0L3RjzvQsdCw0L3Rjw==',
   floor_areas: [3, 18.24, 1.9, 13.68, 7.07, 2.48, 7.85, 4.1, 8.61],
@@ -43,5 +43,5 @@ export const private_data = {
   attic_total_text:
     'MjYuNjUg0LrQsi7QvCAtINGH0LjRgdGC0LAg0L/Qu9C+0Yk70LLQuNGB0L7Rh9C40L3QsDogMTAzLTE4NSDRgdC8Lg==',
   google:
-    'https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d475.40591488256587!2d23.33192707340583!3d42.68880330760123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m5!1s0x40aa850acef85ebb%3A0xdab6fde59c607aa8!2sul.%20%22Lyuben%20Karavelov%22%205a%2C%20Sofia%2C%20Bulgarien!3m2!1d42.6888104!2d23.332054!4m0!5e0!3m2!1sde!2sde!4v1693424904297!5m2!1sde!2sde',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28071.56096819231!2d23.30275890382287!3d42.695382846185225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856dd1517c85%3A0xffb5a61b370ddfaa!2sSofia%20Center%2C%20Sofia%2C%20Bulgaria!5e1!3m2!1sen!2sde!4v1768846168566!5m2!1sen!2sde',
 };

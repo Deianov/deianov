@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AuthGuard } from '@core/guards/auth.guard';
 
 import { HomeComponent } from './features/home/home.component';
 
@@ -25,6 +26,7 @@ export const routes: Routes = [
   {
     path: 'private',
     title: 'Private',
+    canActivate: [AuthGuard],
     loadComponent: () =>
       import('./features/private/private.component').then((m) => m.PrivateComponent),
   },
