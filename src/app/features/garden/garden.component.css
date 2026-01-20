@@ -1,11 +1,5 @@
-app-garden h2 {
-  margin: 0;
-  margin-bottom: 30px;
-}
-
-app-garden {
-  margin: 0 30px;
-  font-size: 13px;
+:root {
+  --table-font-size: var(--size-12);
 }
 
 main {
@@ -14,16 +8,28 @@ main {
   min-height: 100dvh;
 }
 
+app-garden h2 {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+app-garden {
+  margin: 0 30px;
+}
+
 json-table tr[flag='1'] td:nth-child(3) {
   font-weight: bolder;
   color: #517cc6;
 }
 
 json-table tr[flag='-1'] td:nth-child(3) {
-  /* font-weight: bold; */
-  color: red;
+  color: rgb(218, 107, 107);
 }
 
 json-table tr[flag='0'] {
   color: #959595;
+}
+
+json-table th {
+  font-size: 0.85rem;
 }

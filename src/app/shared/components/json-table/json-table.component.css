@@ -1,0 +1,16 @@
+:root {
+  --table-border: #ddd;
+  --table-font-size: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Combine borders */
+  font-size: var(--table-font-size);
+}
+table th,
+table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid var(--table-border);
+}

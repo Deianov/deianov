@@ -1,8 +1,7 @@
-<!-- <table border="1" cellpadding="6"> -->
-<table border="1">
+<table>
   <thead>
     <tr>
-      @for (key of columns; track $index) {
+      @for (key of columns(); track $index) {
         <th>{{ key }}</th>
       }
     </tr>
@@ -13,7 +12,7 @@
         [attr.flag]="
           setRowAttribute && row[setRowAttribute.fromCell] ? row[setRowAttribute.fromCell] : null
         ">
-        @for (key of columns; track $index) {
+        @for (key of columns(); track $index) {
           <td>{{ row[key] }}</td>
         }
       </tr>

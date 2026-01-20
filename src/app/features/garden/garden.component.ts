@@ -6,15 +6,15 @@ import { JsonTableComponent } from '@shared/components/json-table/json-table.com
 @Component({
   selector: 'app-garden',
   standalone: true,
-  imports: [JsonTableComponent, JsonMaterialTableComponent],
+  imports: [JsonTableComponent], // JsonMaterialTableComponent
   templateUrl: './garden.component.html',
   styleUrl: './garden.component.css',
   encapsulation: ViewEncapsulation.None,
 })
 export class GardenComponent {
-  readonly #platsUrl = 'assets/json/plants.json';
+  readonly #plantsUrl = 'assets/json/plants.json';
 
   readonly setRowAttributeFromCell = { key: 'flag', fromCell: 'Flag' };
 
-  readonly plants = inject(DataService).getJson(this.#platsUrl, []);
+  readonly plants = inject(DataService).getJson(this.#plantsUrl, []);
 }
