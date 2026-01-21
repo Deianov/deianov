@@ -1,12 +1,16 @@
 :root {
   --table-border: #ddd;
   --table-font-size: 0.75rem;
+  --table-th-font-size: 0.85rem;
 }
 
 table {
   width: 100%;
   border-collapse: collapse; /* Combine borders */
   font-size: var(--table-font-size);
+}
+table th {
+  font-size: var(--table-th-font-size);
 }
 table th,
 table td {

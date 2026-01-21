@@ -1,5 +1,6 @@
 :root {
-  --table-font-size: var(--size-12);
+  --table-font-size: 0.75rem;
+  --table-th-font-size: 0.85rem;
 }
 
 main {
@@ -9,27 +10,62 @@ main {
 }
 
 app-garden h2 {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 25px 0;
 }
 
 app-garden {
-  margin: 0 30px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 25px;
 }
+
+json-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+json-table td,
+json-table th {
+  min-width: 3.3rem;
+}
+
+json-table td:nth-of-type(-n + 4),
+json-table th:nth-of-type(-n + 4) {
+  min-width: 12rem;
+}
+
+json-table td:nth-of-type(n + 13),
+json-table th:nth-of-type(n + 13) {
+  min-width: auto;
+}
+
+json-table th {
+  font-size: 0.85rem;
+}
+
+json-table td:nth-of-type(n + 6) {
+  font-size: 0.7rem;
+}
+
+json-table td:last-child,
+json-table th:last-child {
+  display: none;
+}
+
+/* Flags */
 
 json-table tr[flag='1'] td:nth-child(3) {
   font-weight: bolder;
   color: #517cc6;
 }
 
-json-table tr[flag='-1'] td:nth-child(3) {
+json-table tr[flag='0'] td:nth-child(3) {
   color: rgb(218, 107, 107);
 }
 
-json-table tr[flag='0'] {
+json-table tr[flag='-1'] {
   color: #959595;
-}
-
-json-table th {
-  font-size: 0.85rem;
 }
