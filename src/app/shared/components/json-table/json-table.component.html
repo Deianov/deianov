@@ -2,16 +2,24 @@
   <thead>
     <tr>
       @for (key of columns(); track $index) {
-        <th>{{ key }}</th>
+        @if (isSortable(key)) {
+          <th
+            class="sortable"
+            [class.primary]="isPrimary(key)"
+            [class.secondary]="isSecondary(key)"
+            (click)="sortBy(key)"
+            >{{ key }}
+            <app-arrow></app-arrow>
+          </th>
+        } @else {
+          <th>{{ key }} </th>
+        }
       }
     </tr>
   </thead>
   <tbody>
     @for (row of localData(); track $index) {
-      <tr
-        [attr.flag]="
-          setRowAttribute && row[setRowAttribute.fromCell] ? row[setRowAttribute.fromCell] : null
-        ">
+      <tr [appDynamicAttr]="{ name: attribute().key, value: row[attribute().fromCell] }">
         @for (key of columns(); track $index) {
           <td>{{ row[key] }}</td>
         }

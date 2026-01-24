@@ -18,3 +18,25 @@ table td {
   text-align: left;
   border: 1px solid var(--table-border);
 }
+
+/* sort */
+
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+th.sortable app-arrow {
+  visibility: hidden;
+  margin-left: 4px;
+}
+
+th.sortable.secondary app-arrow {
+  opacity: 0.4;
+}
+
+th.sortable:hover app-arrow,
+th.sortable.primary app-arrow,
+th.sortable.secondary app-arrow {
+  visibility: visible;
+}
