@@ -29,12 +29,6 @@ export const projects = [
     source: 'https://github.com/Deianov/deianov',
     page: '/garden',
   },
-  {
-    name: 'eluate',
-    technologies: 'Angular',
-    source: 'https://github.com/Deianov/Eluate',
-    page: 'https://deianov.github.io/Eluate/',
-  },
 ] as const;
 
 export const private_data = {
