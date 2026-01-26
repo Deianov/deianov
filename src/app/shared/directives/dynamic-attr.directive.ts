@@ -1,26 +1,25 @@
-import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
+import { Directive, effect, ElementRef, inject, input, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appDynamicAttr]',
 })
-export class DynamicAttrDirective implements OnChanges {
-  @Input('appDynamicAttr') attr: { name: string; value: any } = { name: '', value: '' };
+export class DynamicAttrDirective {
+  readonly #inputRef = inject(ElementRef);
+  readonly #renderer = inject(Renderer2);
 
-  constructor(
-    private el: ElementRef,
-    private renderer: Renderer2,
-  ) {}
+  readonly appDynamicAttr = input<{ name: string; value: any }>({ name: '', value: '' });
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['attr']) {
-      const { name, value } = this.attr;
+  constructor() {
+    effect(() => {
+      const { name, value } = this.appDynamicAttr();
+
       if (name) {
         if (value === null || value === undefined) {
-          this.renderer.removeAttribute(this.el.nativeElement, name);
+          this.#renderer.removeAttribute(this.#inputRef.nativeElement, name);
         } else {
-          this.renderer.setAttribute(this.el.nativeElement, name, String(value));
+          this.#renderer.setAttribute(this.#inputRef.nativeElement, name, String(value));
         }
       }
-    }
+    });
   }
 }
