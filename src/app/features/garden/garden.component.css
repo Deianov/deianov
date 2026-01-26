@@ -67,5 +67,5 @@ json-table tr[flag='0'] td:nth-child(3) {
 }
 
 json-table tr[flag='-1'] {
-  color: #959595;
+  opacity: 0.3;
 }
