@@ -32,6 +32,12 @@ json-table th {
   min-width: 3.3rem;
 }
 
+json-table td:nth-of-type(15) > div {
+  max-height: 4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 json-table td:nth-of-type(-n + 4),
 json-table th:nth-of-type(-n + 4) {
   min-width: 12rem;

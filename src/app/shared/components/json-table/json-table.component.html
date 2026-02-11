@@ -21,7 +21,9 @@
     @for (row of localData(); track $index) {
       <tr [appDynamicAttr]="{ name: attribute().key, value: row[attribute().fromCell] }">
         @for (key of columns(); track $index) {
-          <td>{{ row[key] }}</td>
+          <td
+            ><div>{{ row[key] }}</div></td
+          >
         }
       </tr>
     }
