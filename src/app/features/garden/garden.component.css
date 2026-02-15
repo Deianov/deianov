@@ -63,13 +63,16 @@ json-table th:last-child {
 
 /* Flags */
 
-json-table tr[flag='1'] td:nth-child(3) {
-  font-weight: bolder;
-  color: #517cc6;
+json-table tr[flag='0'] td:nth-child(3) {
+  color: inherit;
 }
 
-json-table tr[flag='0'] td:nth-child(3) {
-  color: rgb(218, 107, 107);
+json-table tr[flag='1'] td:nth-child(3) {
+  color: rgb(170, 154, 62);
+}
+
+json-table tr[flag]:not([flag='0']):not([flag='1']):not([flag='-1']) td:nth-child(3) {
+  color: #517cc6;
 }
 
 json-table tr[flag='-1'] {
