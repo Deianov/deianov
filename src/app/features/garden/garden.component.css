@@ -33,36 +33,43 @@ json-table th {
 }
 
 json-table td > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   white-space: pre-line;
 }
-/*
-json-table td:nth-of-type(n + 6) {
-font-size: 0.7rem;
+
+json-table td:nth-child(n + 6):nth-child(-n + 12) > div,
+json-table th:nth-child(n + 6):nth-child(-n + 12) > div {
+  justify-content: center;
 }
-*/
+
+/* toDo: move style from td to div */
 
 json-table td:nth-of-type(15) > div {
-  max-height: 4.5rem;
+  max-height: 4.8rem;
   overflow-y: auto;
   overflow-x: hidden;
-  max-width: auto;
+  max-width: none;
+  align-items: safe center;
 }
 
-json-table td:nth-of-type(-n + 4),
-json-table th:nth-of-type(-n + 4) {
-  min-width: 12rem;
+json-table td:nth-of-type(-n + 4) > div,
+json-table th:nth-of-type(-n + 4) > div,
+json-table td:nth-of-type(15) > div {
+  min-width: 11rem;
 }
 
 json-table td:nth-child(n + 6):nth-child(-n + 12),
 json-table th:nth-child(n + 6):nth-child(-n + 12) {
   font-size: 0.7rem;
-  max-width: 2rem;
+  max-width: 1rem;
 }
 
 json-table td:nth-of-type(n + 13),
 json-table th:nth-of-type(n + 13) {
-  min-width: auto;
-  max-width: auto;
+  min-width: 0;
+  max-width: none;
 }
 
 json-table th {
