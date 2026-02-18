@@ -6,17 +6,28 @@
 
 table {
   width: 100%;
+  max-width: 100%;
+  table-layout: auto;
   border-collapse: collapse; /* Combine borders */
   font-size: var(--table-font-size);
 }
-table th {
+
+th {
   font-size: var(--table-th-font-size);
 }
-table th,
-table td {
-  padding: 8px;
-  text-align: left;
+
+th,
+td {
+  padding: 6px;
   border: 1px solid var(--table-border);
+  text-align: left;
+}
+
+td > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: pre-line;
 }
 
 /* sort */
