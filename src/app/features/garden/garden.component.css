@@ -20,23 +20,9 @@ app-garden {
   margin: 25px;
 }
 
-json-table {
-  width: 100%;
-  max-width: 100%;
-  table-layout: auto;
-  border-collapse: collapse;
-}
-
 json-table td,
 json-table th {
-  min-width: 3.3rem;
-}
-
-json-table td > div {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  white-space: pre-line;
+  min-width: 3rem; /* 3.3 */
 }
 
 json-table td:nth-child(n + 6):nth-child(-n + 12) > div,
@@ -44,8 +30,7 @@ json-table th:nth-child(n + 6):nth-child(-n + 12) > div {
   justify-content: center;
 }
 
-/* toDo: move style from td to div */
-
+/* scroll */
 json-table td:nth-of-type(15) > div {
   max-height: 4.8rem;
   overflow-y: auto;
@@ -60,10 +45,8 @@ json-table td:nth-of-type(15) > div {
   min-width: 11rem;
 }
 
-json-table td:nth-child(n + 6):nth-child(-n + 12),
-json-table th:nth-child(n + 6):nth-child(-n + 12) {
+json-table td:nth-child(n + 6):nth-child(-n + 14) {
   font-size: 0.7rem;
-  max-width: 1rem;
 }
 
 json-table td:nth-of-type(n + 13),
