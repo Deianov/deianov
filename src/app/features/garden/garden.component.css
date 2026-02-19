@@ -16,26 +16,28 @@ app-garden h2 {
 app-garden {
   width: 100%;
   max-width: 100%;
+  min-height: 0;
   overflow-x: auto;
   margin: 25px;
 }
 
 json-table td,
 json-table th {
-  min-width: 3rem; /* 3.3 */
+  min-width: 3.3rem;
 }
 
-json-table td:nth-child(n + 6):nth-child(-n + 12) > div,
-json-table th:nth-child(n + 6):nth-child(-n + 12) > div {
-  justify-content: center;
+json-table td:nth-child(n + 6):nth-child(-n + 14) > div,
+json-table th:nth-child(n + 6):nth-child(-n + 14) > div {
+  align-items: center;
 }
 
 /* scroll */
+
 json-table td:nth-of-type(15) > div {
   max-height: 4.8rem;
+  max-width: none;
   overflow-y: auto;
   overflow-x: hidden;
-  max-width: none;
   align-items: safe center;
 }
 
@@ -49,8 +51,8 @@ json-table td:nth-child(n + 6):nth-child(-n + 14) {
   font-size: 0.7rem;
 }
 
-json-table td:nth-of-type(n + 13),
-json-table th:nth-of-type(n + 13) {
+json-table td:nth-of-type(n + 14),
+json-table th:nth-of-type(n + 14) {
   min-width: 0;
   max-width: none;
 }
