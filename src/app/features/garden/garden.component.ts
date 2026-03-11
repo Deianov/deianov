@@ -1,11 +1,12 @@
-import { Component, computed, inject, Signal, ViewEncapsulation } from '@angular/core';
+import { Component, computed, inject, ViewEncapsulation } from '@angular/core';
 import { DataService } from '@core';
 import { JsonTableComponent, SortState, TableRow } from '@shared/components/json-table/json-table.component';
+import { LoaderComponent } from '@shared/svg/loader.component';
 
 @Component({
   selector: 'app-garden',
   standalone: true,
-  imports: [JsonTableComponent], // JsonMaterialTableComponent
+  imports: [JsonTableComponent, LoaderComponent],
   templateUrl: './garden.component.html',
   styleUrl: './garden.component.css',
   encapsulation: ViewEncapsulation.None,
@@ -18,16 +19,15 @@ export class GardenComponent {
   private readonly SECONDARY_SORT_INDEX = 2;
   private readonly SORTABLE_FIELDS = [0, 2, 3];
 
-  protected plants: Signal<TableRow[]> = inject(DataService).getJson<TableRow[]>(
-    this.#plantsUrl,
-    [],
-  );
+  // Get table data
+  protected resource = inject(DataService).getJson<TableRow[]>(this.#plantsUrl, []);
+  protected isReady = computed(() => this.resource.hasValue() && this.resource.value().length > 0);
 
   // Add a row attribute for styling.
   protected addAttributes = { key: 'flag', fromCell: 'Flag' };
 
   protected initialSortState = computed<SortState>(() => {
-    const fields = this.plants()[0];
+    const fields = this.resource.value()[0];
     return {
       primary: this.mapToField(this.PRIMARY_SORT_INDEX, fields),
       secondary: this.mapToField(this.SECONDARY_SORT_INDEX, fields),

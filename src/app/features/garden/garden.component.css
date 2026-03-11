@@ -9,6 +9,18 @@ main {
   min-height: 100dvh;
 }
 
+app-header {
+  flex-grow: 0;
+}
+
+app-loader {
+  padding: 0;
+}
+
+.content {
+  flex-grow: 1;
+}
+
 app-garden h2 {
   margin: 0 0 25px 0;
 }
@@ -19,6 +31,9 @@ app-garden {
   min-height: 0;
   overflow-x: auto;
   margin: 25px;
+
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 json-table td,

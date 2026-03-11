@@ -1,2 +1,10 @@
-<h2>Plants</h2>
-<json-table [data]="plants()" [attribute]="addAttributes" [sort]="initialSortState()"></json-table>
+<h2>Pflanzen</h2>
+
+@if (isReady()) {
+  <json-table [data]="resource.value()" [attribute]="addAttributes" [sort]="initialSortState()">
+  </json-table>
+} @else if (resource.error()) {
+  <div>Unable to load table data.</div>
+} @else {
+  <app-loader></app-loader>
+}
